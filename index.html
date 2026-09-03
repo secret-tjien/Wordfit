@@ -34,8 +34,28 @@
         touch-action: manipulation !important;
       }
 
-      .hs-table-wrapper, #level-select-overlay, #cheat-menu-overlay, .chapter-levels {
+      /* Allow vertical touch panning / drag-to-scroll on all modals, overlays and their children */
+      #wordfit-level-select-overlay,
+      #wordfit-level-select-overlay *,
+      #wordfit-cheat-menu-overlay,
+      #wordfit-cheat-menu-overlay *,
+      #cheat-menu-content,
+      #cheat-menu-content *,
+      .hs-table-wrapper,
+      .hs-table-wrapper *,
+      #highscores-modal,
+      #highscores-modal *,
+      #time-attack-over-modal,
+      #time-attack-over-modal *,
+      .chapter-levels,
+      .chapter-levels * {
         touch-action: pan-y !important;
+      }
+
+      #wordfit-level-select-overlay {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior-y: contain !important;
       }
 
       html, body {
@@ -1419,7 +1439,7 @@
         100% { transform: translateY(calc(-50% - 20px)) scale(0.95); opacity: 0; }
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-jsx1XICx.js"></script>
+    <script type="module" crossorigin src="./assets/index-DYlBV7-n.js"></script>
   </head>
   <body>
     <div id="screen-wrapper">
